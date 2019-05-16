@@ -22,7 +22,11 @@
                  :opts     ["--enable-url-protocols=http"
                             "--report-unsupported-elements-at-runtime"
                             "--initialize-at-build-time"
+                            "--no-fallback"
                             "--no-server" ;;avoid spawning build server
+                            "--initialize-at-run-time=org.projectodd.wunderboss.web.undertow.UndertowWeb,io.undertow"
+                            "-H:+ReportExceptionStackTraces"
+                            "-H:ReflectionConfigurationFiles=reflection.json"
                             "-H:ConfigurationResourceRoots=resources"
                             ~(str "-H:ResourceConfigurationFiles="
                                (System/getProperty "user.dir")
