@@ -4,10 +4,10 @@
   :license {:name "MIT license"
             :url  "https://opensource.org/licenses/MIT"}
 
-  :dependencies [[metosin/reitit "0.3.1"]
+  :dependencies [[metosin/reitit "0.3.3"]
                  [org.clojure/clojure "1.9.0"]
                  [ring/ring-defaults "0.3.2"]
-                 [http-kit "2.3.0"]]
+                 [org.immutant/immutant "2.1.10"]]
 
   :plugins [[io.taylorwood/lein-native-image "0.3.0"]]
 

@@ -1,5 +1,5 @@
 (ns server.core
-  (:require [org.httpkit.server :as http]
+  (:require [immutant.web :as web]
             [reitit.ring :as ring]
             [ring.middleware.defaults
              :refer [wrap-defaults
@@ -35,6 +35,6 @@
     (-> handler
         (wrap-resource "public")
         (wrap-defaults api-defaults)
-        (http/run-server {:port port}))
+        (web/run {:port port}))
     (println "🔥 started on port:" port "🔥")))
 
